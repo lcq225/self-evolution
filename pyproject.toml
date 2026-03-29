@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "self-evolution"
+version = "1.0.0"
+description = "Self-improving AI agent engine with automatic error capture, pattern detection, and AI-powered attribution analysis"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Mr Lee", email = "your-email@example.com"}
+]
+keywords = ["ai", "agent", "self-improvement", "evolution", "machine-learning", "copaw"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "memorycoreclaw>=2.1.0",
+    "numpy>=1.21.0",
+    "requests>=2.25.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=3.0.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+    "mypy>=0.950",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/self-evolution"
+Documentation = "https://github.com/your-username/self-evolution#readme"
+Repository = "https://github.com/your-username/self-evolution.git"
+Changelog = "https://github.com/your-username/self-evolution/blob/main/CHANGELOG.md"
+
+[project.scripts]
+self-evolution = "self_evolution.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+self_evolution = ["*.md", "*.json"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "-v --cov=self_evolution --cov-report=term-missing"
