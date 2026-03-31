@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "self-evolution"
-version = "1.0.0"
+version = "2.4.0"
 description = "Self-improving AI agent engine with automatic error capture, pattern detection, and AI-powered attribution analysis"
 readme = "README.md"
 license = {text = "MIT"}

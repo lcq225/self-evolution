@@ -11,7 +11,7 @@ A comprehensive self-evolution system for AI agents with:
 Version: 1.0.0
 """
 
-__version__ = "1.0.0"
+__version__ = "2.4.0"
 __author__ = "Mr Lee"
 __email__ = "your-email@example.com"
 __license__ = "MIT"
