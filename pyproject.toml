@@ -27,7 +27,6 @@ classifiers = [
 ]
 requires-python = ">=3.8"
 dependencies = [
-    "memorycoreclaw>=2.1.0",
     "numpy>=1.21.0",
     "requests>=2.25.0",
 ]
@@ -39,6 +38,9 @@ dev = [
     "black>=22.0.0",
     "flake8>=4.0.0",
     "mypy>=0.950",
+]
+memory-integration = [
+    "memorycoreclaw>=2.3.0",
 ]
 
 [project.urls]

@@ -35,16 +35,22 @@
 
 ## 📦 Installation
 
-### From PyPI (Recommended)
+### Standalone (Recommended)
 
 ```bash
 pip install self-evolution
 ```
 
+### With MemoryCoreClaw Integration
+
+```bash
+pip install self-evolution[memory-integration]
+```
+
 ### From Source
 
 ```bash
-git clone https://github.com/your-username/self-evolution.git
+git clone https://github.com/lcq225/self-evolution.git
 cd self-evolution
 pip install -e .
 ```
@@ -53,6 +59,20 @@ pip install -e .
 
 ```bash
 pip install -e ".[dev]"
+```
+
+### Database Configuration
+
+By default, Self-Evolution uses an in-memory database for fast operation. To persist data:
+
+```python
+from self_evolution import EvolutionTracker
+
+# Use independent SQLite database
+tracker = EvolutionTracker(db_path="evolution.db")
+
+# Or specify custom path
+tracker = EvolutionTracker(db_path="/path/to/your/evolution.db")
 ```
 
 ---
